@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOYA &bull; Plan Your Custom Expedition & Northern Basecamps</title>
+  <meta name="description" content="Connect with VOYA expedition coordinators in Skardu and Islamabad. Custom 4x4 itineraries, trekking permits, and immediate booking inquiries.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='%231B4332'/><circle cx='20' cy='15' r='8' fill='%23F59E0B'/><path d='M8 34L20 16L32 34H8Z' fill='%232D6A4F'/></svg>">
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="VOYA Home">
+        <div class="brand-logo-mark">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="16" r="10" fill="url(#sunGlowCon)" opacity="0.85"/>
+            <path d="M7 34L20 14L33 34H7Z" fill="url(#forestPeakCon)" />
+            <path d="M14 34L20 22L26 34H14Z" fill="#52B788" />
+            <path d="M20 7L20 14" stroke="#FEF08A" stroke-width="2.2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="sunGlowCon" x1="20" y1="6" x2="20" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F59E0B"/>
+                <stop offset="1" stop-color="#D97706" stop-opacity="0.3"/>
+              </linearGradient>
+              <linearGradient id="forestPeakCon" x1="20" y1="14" x2="20" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D6A4F"/>
+                <stop offset="1" stop-color="#0F241A"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-text">VOYA</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="gallery.html" class="nav-link">Folklore</a></li>
+          <li><a href="services.html" class="nav-link">Expeditions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="guide.html" class="nav-link">Guide</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="plan.html" class="btn-primary">Plan Journey</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= Subpage Banner ================= -->
+    <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80');">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">&rsaquo;</span>
+          <span>Basecamps & Contact</span>
+        </div>
+        <h1 class="section-title" style="color: #fff; font-size: 3.2rem; margin-bottom: 0.8rem;">
+          Basecamps & Operations Desk
+        </h1>
+        <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.88); max-width: 680px; margin: 0 auto;">
+          Direct communication with our on-ground dispatch team in Skardu and coordination office in Islamabad.
+        </p>
+      </div>
+    </section>
+
+    <!-- Custom Planner Notification Callout -->
+    <div style="background: var(--color-mist-light); border-bottom: 1px solid rgba(217, 119, 6, 0.2); padding: 1rem 0; text-align: center;">
+      <div class="container">
+        <p style="font-size: 0.94rem; color: var(--color-forest-deep); font-weight: 600;">
+          ✨ Looking to customize your own day-by-day route? Use our interactive 
+          <a href="plan.html" style="color: var(--color-sun-deep); text-decoration: underline; font-weight: 700;">Custom Expedition Builder &rarr;</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ================= Main Contact Layout ================= -->
+    <section style="padding: 5.5rem 0;">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Left Column: Validated Booking Form -->
+          <div class="form-box">
+            <span class="section-tag gold">Direct Coordinator Desk</span>
+            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--color-forest-deep);">Expedition Inquiry Form</h2>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 2rem;">
+              Fill out your trip preferences below. We respond with a day-by-day customized itinerary within 24 hours.
+            </p>
+
+            <form id="expeditionForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="fullName">Full Name *</label>
+                  <input type="text" id="fullName" class="form-control" placeholder="e.g. Zainab Ahmed" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="emailAddress">Email Address *</label>
+                  <input type="email" id="emailAddress" class="form-control" placeholder="zainab@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="phoneNumber">WhatsApp / Mobile Number *</label>
+                  <input type="tel" id="phoneNumber" class="form-control" placeholder="+92 300 1234567" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="preferredRegion">Destination Focus *</label>
+                  <select id="preferredRegion" class="form-control" required>
+                    <option value="Basho Valley Pine Retreat">Basho Valley Secret Pines (Skardu)</option>
+                    <option value="Hunza Valley & Passu">Hunza Valley & Passu Cathedral</option>
+                    <option value="Deosai Alpine Plains">Deosai "Land of Giants" (Sheosar Lake)</option>
+                    <option value="Nanga Parbat & Fairy Meadows">Nanga Parbat & Fairy Meadows Trek</option>
+                    <option value="Astore & Rama Glacial Lake">Astore Valley & Rama Glacial Lake</option>
+                    <option value="Skardu & Cold Deserts">Skardu & Katpana Cold Deserts</option>
+                    <option value="Grand Karakoram Circuit">Grand Karakoram Circuit (Complete Northern Area)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="expeditionType">Expedition Style *</label>
+                  <select id="expeditionType" class="form-control" required>
+                    <option value="Signature 4x4 Jeep Safari">Signature 4x4 Jeep Safari</option>
+                    <option value="High-Altitude Trekking & Basecamp">High-Altitude Trekking & Basecamp</option>
+                    <option value="Luxury Glamping & Stargazing">Luxury Glamping & Stargazing Domes</option>
+                    <option value="Cultural Heritage & Silk Road">Cultural Heritage & Silk Road</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="travelerCount">Number of Travelers *</label>
+                  <input type="number" id="travelerCount" class="form-control" min="1" max="25" value="2" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="travelDate">Estimated Departure Date *</label>
+                <input type="date" id="travelDate" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="customNotes">Special Requirements / Mountain Notes</label>
+                <textarea id="customNotes" class="form-control" rows="4" placeholder="Mention any dietary requirements, photography goals, or interest in remote high passes..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1.05rem; padding: 1rem;">
+                Submit Expedition Request &rarr;
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Basecamp Details & Quick Channels -->
+          <aside class="info-cards-sidebar">
+            <div class="info-card">
+              <div class="info-card-icon">📍</div>
+              <div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem; color: var(--color-forest-deep);">Skardu Basecamp Operations</h3>
+                <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6;">
+                  Airport Road, Near Shangrila Crossing, Skardu, Gilgit-Baltistan.<br>
+                  <em>On-ground 4WD fleet dispatch & mountain rescue outpost.</em>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">🏛️</div>
+              <div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem; color: var(--color-forest-deep);">Islamabad Coordination Desk</h3>
+                <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6;">
+                  Level 4, Beverly Centre, Blue Area, Islamabad.<br>
+                  <em>Flight ticketing, guest permits & pre-trip briefings.</em>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">📞</div>
+              <div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem; color: var(--color-forest-deep);">Direct Expedition Hotlines</h3>
+                <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6;">
+                  <strong>WhatsApp / Phone:</strong> +92 345 9876543<br>
+                  <strong>Satellite Emergency:</strong> +88 216 5432109<br>
+                  <strong>Email:</strong> basecamp@voyapk.com
+                </p>
+              </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, var(--color-forest-deep), #16382b); color: white; border-radius: var(--radius-md); padding: 1.8rem; border: 1px solid rgba(254, 240, 138, 0.2);">
+              <h4 style="font-size: 1.1rem; color: var(--color-sun-glow); margin-bottom: 0.6rem;">☀️ 24/7 Weather & Pass Status</h4>
+              <p style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
+                Babusar Pass, Deosai Plateau, and Lowari Tunnel are monitored in real-time. Text our coordinators for today's road clearance.
+              </p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Interactive FAQ Accordion ================= -->
+    <section style="background: #f7f5ee; padding: 5.5rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Common Queries</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Key information regarding permits, flights, safety, and booking.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>Is Gilgit-Baltistan safe for solo and female travelers?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, Gilgit-Baltistan is recognized as one of the safest and most hospitable regions in South Asia, with nearly zero violent crime against travelers. Female travelers consistently report feeling welcomed, safe, and deeply respected by the local communities of Hunza, Skardu, and Astore.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do we reach Skardu & Hunza (Flight vs Karakoram Highway)?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Direct commercial flights operate daily from Islamabad to Skardu and Gilgit (approx. 45–60 minutes), offering spectacular aerial views of Nanga Parbat and K2. Mountain flights are weather-dependent; if cancelled, our standby 4WD fleet drives via the scenic Karakoram Highway without losing travel days.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What permits are required for international visitors?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Most general tourist routes (Hunza, Skardu city, Katpana Desert, Attabad Lake) require only a standard Pakistan Tourist E-Visa. For restricted high-altitude border zones or mountaineering above 6,500m (like K2 Gondogoro La), an official Ministry of Tourism Trekking Permit is mandatory, which VOYA arranges entirely on your behalf.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is VOYA's refund policy if weather closes high passes?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Safety is paramount. If extreme weather temporarily closes high passes like Deosai or Babusar Top, our local coordinators immediately pivot your itinerary to alternative sunlit valleys (such as lower Hunza, Shigar Valley, or Khaplu) with zero penalty fees.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= Booking Confirmation Modal ================= -->
+    <div class="modal-overlay" id="bookingConfirmationModal" role="dialog" aria-modal="true">
+      <div class="modal-container" style="max-width: 580px; text-align: center; padding: 3rem 2rem;">
+        <span style="font-size: 3.5rem; display: block; margin-bottom: 1rem;">🌲</span>
+        <span class="section-tag gold" style="margin-bottom: 1rem;">Inquiry Confirmed</span>
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-forest-deep);">Expedition Dossier Created!</h2>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Your reference code has been logged with our Northern operations desk:
+        </p>
+
+        <div style="background: var(--color-mist-light); border: 2px dashed var(--color-sun-deep); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+          <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-muted); display: block;">VOYA Reference Code</span>
+          <strong id="confirmRefCode" style="font-size: 1.8rem; color: var(--color-forest-deep); letter-spacing: 2px;">VYA-82910</strong>
+        </div>
+
+        <div id="confirmDetails" style="text-align: left; background: #fafafa; border-radius: var(--radius-sm); padding: 1.2rem; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.7; margin-bottom: 2rem; border: 1px solid rgba(22, 56, 43, 0.1);">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+          Our basecamp team in Skardu will contact you on WhatsApp with a customized day-by-day plan within 24 hours.
+        </p>
+
+        <button id="closeConfirmModal" class="btn-primary" style="padding: 0.8rem 2.2rem;">Close & Continue Exploring</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <div class="brand-logo-mark">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="16" r="10" fill="#F59E0B" opacity="0.85"/>
+                <path d="M7 34L20 14L33 34H7Z" fill="#2D6A4F" />
+                <path d="M14 34L20 22L26 34H14Z" fill="#52B788" />
+              </svg>
+            </div>
+            <span class="brand-text">VOYA</span>
+          </div>
+          <p>
+            Dedicated to mindful, authentic journeys across Pakistan’s Northern territories: Basho Valley, Hunza, Skardu, Deosai, and the giants of the Karakoram.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Basecamp Contacts</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Skardu Operations Desk</a></li>
+            <li><a href="contact.html">Islamabad Briefing Center</a></li>
+            <li><a href="contact.html">Emergency Mountain Hotline</a></li>
+            <li><a href="contact.html">Custom 4x4 Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="gallery.html">Folklore Gallery</a></li>
+            <li><a href="services.html">Expeditions</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="guide.html">Field Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Receive live road reports and blossom forecasts.</p>
+          <form class="newsletter-form" action="#">
+            <input type="email" class="newsletter-input" placeholder="Your email address..." required>
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VOYA Expeditions Pakistan. All rights reserved.</p>
+        <p>Built with respect for the Northern lands.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
