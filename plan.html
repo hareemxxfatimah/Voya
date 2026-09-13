@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOYA &bull; Custom Expedition Builder & Itinerary Planner</title>
+  <meta name="description" content="Design your tailored Northern Pakistan journey with VOYA. Select your pine valleys, travel pace, lodging style, and generate a bespoke day-by-day expedition itinerary.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='%231B4332'/><circle cx='20' cy='15' r='8' fill='%23F59E0B'/><path d='M8 34L20 16L32 34H8Z' fill='%232D6A4F'/></svg>">
+</head>
+<body>
+
+  <!-- ================= Header & Navigation ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="VOYA Home">
+        <div class="brand-logo-mark">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="16" r="10" fill="url(#sunGlowPlan)" opacity="0.85"/>
+            <path d="M7 34L20 14L33 34H7Z" fill="url(#forestPeakPlan)" />
+            <path d="M14 34L20 22L26 34H14Z" fill="#52B788" />
+            <path d="M20 7L20 14" stroke="#FEF08A" stroke-width="2.2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="sunGlowPlan" x1="20" y1="6" x2="20" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F59E0B"/>
+                <stop offset="1" stop-color="#D97706" stop-opacity="0.3"/>
+              </linearGradient>
+              <linearGradient id="forestPeakPlan" x1="20" y1="14" x2="20" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D6A4F"/>
+                <stop offset="1" stop-color="#0F241A"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-text">VOYA</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="gallery.html" class="nav-link">Folklore</a></li>
+          <li><a href="services.html" class="nav-link">Expeditions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="guide.html" class="nav-link">Guide</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <button class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= Subpage Banner ================= -->
+    <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80');">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">&rsaquo;</span>
+          <span>Expedition Builder</span>
+        </div>
+        <h1 class="section-title" style="color: #fff; font-size: 3.2rem; margin-bottom: 0.8rem;">
+          Custom Journey Builder
+        </h1>
+        <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.88); max-width: 680px; margin: 0 auto;">
+          Design an unhurried, tailor-made route through Pakistan's sunlit pine forests and high Karakoram peaks. Your choices instantly build a custom day-by-day dossier.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= Interactive Planner Builder ================= -->
+    <section style="padding: 5.5rem 0;">
+      <div class="container">
+        <div class="planner-layout">
+
+          <!-- Left Column: Interactive Step Selector -->
+          <div class="planner-steps-col">
+
+            <!-- Step 1: Select Northern Sanctuaries -->
+            <div class="planner-step-box">
+              <span class="step-badge">Step 1 of 4</span>
+              <h2 class="step-title">Select Your Sanctuaries</h2>
+              <p class="step-desc">Pick 1 or more northern regions you wish to experience. Your daily schedule will adapt automatically.</p>
+
+              <div class="pick-grid">
+                <!-- Basho Valley -->
+                <div class="pick-card pick-region selected" data-region="basho">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🌲</div>
+                  <h3 class="pick-title">Basho Valley</h3>
+                  <p class="pick-desc">Virgin pine forests, wooden bridges & glacial streams in Skardu.</p>
+                </div>
+
+                <!-- Hunza & Passu -->
+                <div class="pick-card pick-region selected" data-region="hunza">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🏰</div>
+                  <h3 class="pick-title">Hunza & Passu</h3>
+                  <p class="pick-desc">700-yr Baltit Fort, Passu Cones needles & apricot groves.</p>
+                </div>
+
+                <!-- Deosai Plains -->
+                <div class="pick-card pick-region" data-region="deosai">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🌸</div>
+                  <h3 class="pick-title">Deosai Plains</h3>
+                  <p class="pick-desc">High plateau wildflowers at 4,114m, brown bears & Sheosar Lake.</p>
+                </div>
+
+                <!-- Fairy Meadows -->
+                <div class="pick-card pick-region" data-region="fairymeadows">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🏔️</div>
+                  <h3 class="pick-title">Nanga Parbat Base</h3>
+                  <p class="pick-desc">Cliffside Raikot track & Fairy Meadows alpine lawns.</p>
+                </div>
+
+                <!-- Katpana Cold Desert -->
+                <div class="pick-card pick-region" data-region="skardu">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🏜️</div>
+                  <h3 class="pick-title">Katpana Cold Dunes</h3>
+                  <p class="pick-desc">High-altitude white sand dunes, Shangrila Lake & night skies.</p>
+                </div>
+
+                <!-- Astore Valley -->
+                <div class="pick-card pick-region" data-region="astore">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🌊</div>
+                  <h3 class="pick-title">Rama Lake & Astore</h3>
+                  <p class="pick-desc">Deep cedar woods and tranquil emerald glacial tarns.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Pace & Travel Style -->
+            <div class="planner-step-box">
+              <span class="step-badge">Step 2 of 4</span>
+              <h2 class="step-title">Expedition Pace & Travel Style</h2>
+              <p class="step-desc">How would you like to experience the northern lands?</p>
+
+              <div class="pick-grid" style="grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));">
+                <div class="pick-card pick-pace selected" data-pace="relaxed">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🧘</div>
+                  <h3 class="pick-title">Unhurried & Mindful</h3>
+                  <p class="pick-desc">Leisurely mornings, cultural homestays, scenic photography, and restorative nature walks.</p>
+                </div>
+
+                <div class="pick-card pick-pace" data-pace="active">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🥾</div>
+                  <h3 class="pick-title">Active Trekker</h3>
+                  <p class="pick-desc">Moderate daily hikes to high-altitude viewpoints, hanging bridges, and ancient fort citadels.</p>
+                </div>
+
+                <div class="pick-card pick-pace" data-pace="offroad">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🚙</div>
+                  <h3 class="pick-title">Rugged 4WD Safari</h3>
+                  <p class="pick-desc">Off-road mountain passes, crossing Deosai wilderness, and remote valley trails.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Mountain Lodging -->
+            <div class="planner-step-box">
+              <span class="step-badge">Step 3 of 4</span>
+              <h2 class="step-title">Sanctuary Shelter & Lodging</h2>
+              <p class="step-desc">Choose the ambiance you wish to return to each evening.</p>
+
+              <div class="pick-grid" style="grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));">
+                <div class="pick-card pick-lodging selected" data-rate="8000" data-name="Boutique Heritage">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🏰</div>
+                  <h3 class="pick-title">Boutique Heritage</h3>
+                  <p class="pick-desc">Restored stone havelis, royal suites at Shigar, and traditional Hunza craft lodges.</p>
+                </div>
+
+                <div class="pick-card pick-lodging" data-rate="16000" data-name="Luxury Geodesic Domes">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">⛺</div>
+                  <h3 class="pick-title">Stargazing Glamping Domes</h3>
+                  <p class="pick-desc">Heated geodesic domes in Katpana or Hunza with panoramic skylights and en-suite comforts.</p>
+                </div>
+
+                <div class="pick-card pick-lodging" data-rate="4500" data-name="Pine Wood Cabins">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🪵</div>
+                  <h3 class="pick-title">Pine Wood Cabins</h3>
+                  <p class="pick-desc">Rustic cedar cottages beside glacial brooks with wood-burning stoves and home cooking.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Special Experiences & Group Details -->
+            <div class="planner-step-box">
+              <span class="step-badge">Step 4 of 4</span>
+              <h2 class="step-title">Experiences & Explorers</h2>
+              <p class="step-desc">Select curated wilderness experiences and your travel timing.</p>
+
+              <div class="pick-grid" style="margin-bottom: 2rem;">
+                <div class="pick-card pick-exp selected" data-exp="stargazing">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🌌</div>
+                  <h3 class="pick-title">Telescope Stargazing</h3>
+                  <p class="pick-desc">Bortle Class 1 dark sky exploration session.</p>
+                </div>
+
+                <div class="pick-card pick-exp" data-exp="drone">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">📸</div>
+                  <h3 class="pick-title">Drone Photography</h3>
+                  <p class="pick-desc">Guided shoot at sunrise over Passu or Basho.</p>
+                </div>
+
+                <div class="pick-card pick-exp" data-exp="bonfire">
+                  <div class="pick-check-indicator">&#10003;</div>
+                  <div class="pick-icon">🔥</div>
+                  <h3 class="pick-title">Juniper Bonfire & Folk Lore</h3>
+                  <p class="pick-desc">Traditional music and storytelling around camp.</p>
+                </div>
+              </div>
+
+              <!-- Group size & Season Inputs -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="planTravelers">Number of Travelers</label>
+                  <input type="number" id="planTravelers" class="form-control" min="1" max="15" value="2">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="planSeason">Preferred Travel Season</label>
+                  <select id="planSeason" class="form-control">
+                    <option value="Summer Bloom (Jul-Aug)">Peak Summer & Wildflowers (Jul – Aug)</option>
+                    <option value="Spring Blossom (Apr-May)">Spring Apricot Blossom (Apr – May)</option>
+                    <option value="Golden Autumn (Oct-Nov)">Golden Autumn Foliage (Oct – Nov)</option>
+                    <option value="Winter Solitude (Dec-Feb)">Winter Snow Dunes (Dec – Feb)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Real-Time Day-by-Day Customized Timeline Preview -->
+            <div class="itinerary-preview-box">
+              <span class="section-tag gold" style="margin-bottom: 0.5rem;">Live Itinerary Preview</span>
+              <h3 style="font-size: 1.8rem; color: var(--color-forest-deep); margin-bottom: 0.5rem;">Your Tailored Day-by-Day Schedule</h3>
+              <p style="font-size: 0.92rem; color: var(--color-text-muted);">This itinerary automatically recalculates based on your selected sanctuaries and pace.</p>
+
+              <div class="timeline-list" id="itineraryTimeline">
+                <!-- Dynamically injected by planner.js -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Sticky Client Dossier Summary -->
+          <aside class="planner-dossier-col">
+            <div class="dossier-sticky">
+              <div class="dossier-header">
+                <h3><span>🧭</span> Your VOYA Dossier</h3>
+                <p>Personalized Northern Pakistan Blueprint</p>
+              </div>
+
+              <div class="dossier-list">
+                <div class="dossier-list-item">
+                  <span>Recommended Duration:</span>
+                  <span id="dossierDays">6 Days</span>
+                </div>
+                <div class="dossier-list-item">
+                  <span>Explorer Count:</span>
+                  <span id="dossierTravelers">2 Explorers</span>
+                </div>
+                <div class="dossier-list-item">
+                  <span>Expedition Pace:</span>
+                  <span id="dossierPace">Unhurried & Mindful</span>
+                </div>
+                <div class="dossier-list-item">
+                  <span>Lodging Style:</span>
+                  <span id="dossierLodging">Boutique Heritage</span>
+                </div>
+              </div>
+
+              <div style="font-size: 0.8rem; text-transform: uppercase; color: rgba(255,255,255,0.7); letter-spacing: 1px;">Selected Sanctuaries</div>
+              <div class="dossier-tags-wrap" id="dossierTags">
+                <!-- Injected via JS -->
+              </div>
+
+              <div class="dossier-price-row">
+                <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-sun-glow); margin-bottom: 0.3rem;">Estimated Expedition Total</div>
+                <div class="dossier-price-val" id="dossierPrice">PKR 0</div>
+                <div class="dossier-price-sub" id="dossierPriceUsd">Approx. $0 USD Total</div>
+              </div>
+
+              <button id="lockPlanBtn" class="btn-primary" style="width: 100%; justify-content: center; padding: 0.95rem; font-size: 1rem;">
+                Lock & Finalize This Plan &rarr;
+              </button>
+
+              <p style="font-size: 0.78rem; color: rgba(255,255,255,0.65); text-align: center; margin-top: 1rem;">
+                No upfront payment required. Your dossier is reviewed by a Skardu mountain coordinator.
+              </p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Customized Dossier Modal ================= -->
+    <div class="modal-overlay" id="customDossierModal" role="dialog" aria-modal="true">
+      <div class="modal-container" style="max-width: 600px; padding: 2.8rem; text-align: center;">
+        <span style="font-size: 3.5rem; display: block; margin-bottom: 0.8rem;">📜</span>
+        <span class="section-tag gold" style="margin-bottom: 0.8rem;">Custom Itinerary Ready</span>
+        <h2 style="font-size: 2rem; color: var(--color-forest-deep); margin-bottom: 0.6rem;">Your Bespoke Expedition Dossier</h2>
+        <p style="color: var(--color-text-muted); font-size: 0.94rem; margin-bottom: 1.5rem;">
+          We have generated your customized Northern itinerary blueprint:
+        </p>
+
+        <div id="modalDossierContent" style="background: var(--color-mist-light); border: 1px solid rgba(217, 119, 6, 0.25); border-radius: var(--radius-md); padding: 1.5rem; text-align: left; font-size: 0.92rem; line-height: 1.8; color: var(--color-text-body); margin-bottom: 2rem;">
+          <!-- Injected via JS -->
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn-primary" style="padding: 0.85rem 2rem;">Send to Coordinator &rarr;</a>
+          <button id="closePlanModal" class="btn-outline" style="background: var(--color-forest-deep); color: #fff; padding: 0.85rem 1.8rem;">Close Preview</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <div class="brand-logo-mark">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="16" r="10" fill="#F59E0B" opacity="0.85"/>
+                <path d="M7 34L20 14L33 34H7Z" fill="#2D6A4F" />
+                <path d="M14 34L20 22L26 34H14Z" fill="#52B788" />
+              </svg>
+            </div>
+            <span class="brand-text">VOYA</span>
+          </div>
+          <p>
+            Dedicated to mindful, authentic journeys across Pakistan’s Northern territories: Basho Valley, Hunza, Skardu, Deosai, and the giants of the Karakoram.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Custom Explorer</h3>
+          <ul class="footer-links">
+            <li><a href="plan.html">Build Custom Itinerary</a></li>
+            <li><a href="destinations.html">Browse Northern Sanctuaries</a></li>
+            <li><a href="gallery.html">Mountain Lore Gallery</a></li>
+            <li><a href="guide.html">Field Survival Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Expeditions</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Basecamp & Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Field Dispatch</h3>
+          <p>Receive live road reports and blossom forecasts.</p>
+          <form class="newsletter-form" action="#">
+            <input type="email" class="newsletter-input" placeholder="Your email address..." required>
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VOYA Expeditions Pakistan. All rights reserved.</p>
+        <p>Crafted for wanderers of the northern sun and pines.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

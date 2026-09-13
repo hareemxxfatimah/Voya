@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOYA &bull; Mountain Lore & Folklore Gallery of Pakistan</title>
+  <meta name="description" content="Immerse yourself in the legends of Nanga Parbat 'Killer Mountain', Deosai 'Land of Giants', and the ancient forts of Hunza. Interactive lore reader.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='%231B4332'/><circle cx='20' cy='15' r='8' fill='%23F59E0B'/><path d='M8 34L20 16L32 34H8Z' fill='%232D6A4F'/></svg>">
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="VOYA Home">
+        <div class="brand-logo-mark">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="16" r="10" fill="url(#sunGlowGal)" opacity="0.85"/>
+            <path d="M7 34L20 14L33 34H7Z" fill="url(#forestPeakGal)" />
+            <path d="M14 34L20 22L26 34H14Z" fill="#52B788" />
+            <path d="M20 7L20 14" stroke="#FEF08A" stroke-width="2.2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="sunGlowGal" x1="20" y1="6" x2="20" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F59E0B"/>
+                <stop offset="1" stop-color="#D97706" stop-opacity="0.3"/>
+              </linearGradient>
+              <linearGradient id="forestPeakGal" x1="20" y1="14" x2="20" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D6A4F"/>
+                <stop offset="1" stop-color="#0F241A"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-text">VOYA</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="gallery.html" class="nav-link active">Folklore</a></li>
+          <li><a href="services.html" class="nav-link">Expeditions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="guide.html" class="nav-link">Guide</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="plan.html" class="btn-primary">Plan Journey</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= Subpage Banner ================= -->
+    <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1920&q=80');">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">&rsaquo;</span>
+          <span>Folklore & Mountain Lore</span>
+        </div>
+        <h1 class="section-title" style="color: #fff; font-size: 3.2rem; margin-bottom: 0.8rem;">
+          Voices of the Karakoram & Himalayas
+        </h1>
+        <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.88); max-width: 680px; margin: 0 auto;">
+          Every peak in Gilgit-Baltistan holds a memory, every lake a tragedy or miracle, and every high desert a secret whisper from the ancient Silk Route.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= Interactive Folklore Gallery ================= -->
+    <section style="padding: 5.5rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Interactive Stories</span>
+          <h2 class="section-title">Click Any Landscape to Reveal Its History</h2>
+          <p class="section-subtitle">Read authenticated mountain history, local Balti and Shina folklore, and geographical epics.</p>
+        </div>
+
+        <!-- Gallery Filter Tabs -->
+        <div class="filter-bar">
+          <button class="filter-btn gallery-filter-btn active" data-filter="all">All Legends</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="peaks">Mountain Epics</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="plateaus">Mythical Plateaus</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="lakes">Glacial Miracles</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="deserts">High Deserts</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="forts">Ancient Fortresses</button>
+        </div>
+
+        <!-- Lore Cards Grid -->
+        <div class="gallery-grid" id="loreGrid">
+
+          <!-- Card 1: Nanga Parbat - Killer Mountain -->
+          <article class="lore-card" 
+                   data-category="peaks" 
+                   data-title="Nanga Parbat: The Killer Mountain & Diamir"
+                   data-badge="The Killer Mountain"
+                   data-location="Diamer District, Gilgit-Baltistan"
+                   data-altitude="8,126 meters (26,660 ft)"
+                   data-season="June – September (Trekking)">
+            <img src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80" alt="Nanga Parbat Rupal Face">
+            <div class="lore-gradient"></div>
+            <div class="lore-content">
+              <span class="lore-badge" style="background: #e11d48; color: #fff;">Mountain Legend</span>
+              <h3 class="lore-title">Nanga Parbat: The "Killer Mountain"</h3>
+              <p class="lore-snippet">
+                Revered as Diamir ("King of the Mountains") by locals, this Himalayan giant claimed 31 lives before its first summit, earning its dark global reputation.
+              </p>
+              <span class="lore-read-btn">Read Mountain Lore &rarr;</span>
+            </div>
+
+            <!-- Hidden Full Story for Modal -->
+            <div class="lore-full-story" style="display: none;">
+              <p>
+                Standing solitary at <strong>8,126 meters</strong> at the western terminus of the Himalayas, Nanga Parbat is an immense pyramid of rock and hanging ice. In the local Shina language, it is named <em>Diamir</em>, which translates to "Abode of Fairies" or "King of the Mountains."
+              </p>
+              <p>
+                It was christened the <strong>"Killer Mountain"</strong> following tragic expeditions in the 1930s, during which severe blizzards and catastrophic avalanches claimed the lives of numerous climbers and Sherpa porters. Its southern barrier, the <strong>Rupal Face</strong>, rises an astonishing 4,600 meters (15,000 feet) sheer vertical from the valley floor—recognized by mountaineers as the tallest single mountain wall on the surface of the Earth.
+              </p>
+              <p>
+                In 1953, the legendary Austrian climber Hermann Buhl achieved what many thought impossible: the first solo ascent of an 8,000-meter peak without supplementary oxygen. Today, trekkers gaze upon its thunderous ice flutes safely from the emerald lawns of Fairy Meadows.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2: Deosai - Land of the Giants -->
+          <article class="lore-card" 
+                   data-category="plateaus" 
+                   data-title="Deosai: The Plateau of the Giants"
+                   data-badge="Land of the Giants"
+                   data-location="Border of Skardu & Astore"
+                   data-altitude="4,114 meters (13,497 ft)"
+                   data-season="July – Mid September">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Deosai Plains Wildlife">
+            <div class="lore-gradient"></div>
+            <div class="lore-content">
+              <span class="lore-badge">Mythical Plateau</span>
+              <h3 class="lore-title">Deosai: "Land of the Giants"</h3>
+              <p class="lore-snippet">
+                Balti folklore calls it 'Ghbiarsa' (Summer Abode). Ancient legends tell of colossal giants who once protected this highland wilderness from mortal intrusion.
+              </p>
+              <span class="lore-read-btn">Read Mountain Lore &rarr;</span>
+            </div>
+
+            <div class="lore-full-story" style="display: none;">
+              <p>
+                Deosai is a compound of Urdu and Balti terms: <em>Deo</em> (meaning "Giant") and <em>Sai</em> (meaning "Shadow"). In ancient Balti folklore, it was known as <em>Ghbiarsa</em> ("The Summer Place") because it remains frozen under meters of unforgiving snow for eight months each year.
+              </p>
+              <p>
+                Nomadic shepherds believed that supernatural colossi inhabited this high plateau. Because clouds drift directly across the ground and the wind can whip up blinding storms in minutes, travelers felt the presence of unseen sentinels.
+              </p>
+              <p>
+                Today, the true giant of Deosai is the critically protected <strong>Himalayan Brown Bear</strong> (Ursus arctos isabellinus), which roams freely near the crystalline waters of <strong>Sheosar Lake</strong> alongside golden marmots and lammergeier vultures.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3: Baltit Fort - 700 Years of Hunza Dynasty -->
+          <article class="lore-card" 
+                   data-category="forts" 
+                   data-title="Baltit Fort: Guardian of the Silk Road"
+                   data-badge="700-Year Dynasty"
+                   data-location="Karimabad, Central Hunza"
+                   data-altitude="2,400 meters (7,874 ft)"
+                   data-season="Year-round (Best: April – October)">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Baltit Fort Hunza">
+            <div class="lore-gradient"></div>
+            <div class="lore-content">
+              <span class="lore-badge" style="background: var(--color-sun-warmth); color: #fff;">Royal Heritage</span>
+              <h3 class="lore-title">Baltit Fort: The Tibetan Citadel</h3>
+              <p class="lore-snippet">
+                Perched high on a rocky spur overlooking Karimabad, Baltit Fort served as the fortified palace for the ruling Mirs of Hunza for seven centuries.
+              </p>
+              <span class="lore-read-btn">Read Mountain Lore &rarr;</span>
+            </div>
+
+            <div class="lore-full-story" style="display: none;">
+              <p>
+                Baltit Fort's foundations trace back over <strong>700 years</strong>. Built to control the lucrative Silk Route caravans passing through the Karakoram passes into China, the fortress bears distinctive Tibetan and Ladakh architectural styles with thick stone masonry, mud plaster, and intricate cedar wood carvings.
+              </p>
+              <p>
+                According to local historical lore, when the ruler of Hunza married a princess from the royal family of Baltistan, she brought with her skilled Balti carpenters and masons to fortify and elevate the castle. The structure includes secret royal chambers, dungeon cells, stained glass windows, and a defensive watchtower overlooking the entire Ultar Sar glacier valley.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 4: Attabad Lake - Born from the Mountain's Fall -->
+          <article class="lore-card" 
+                   data-category="lakes" 
+                   data-title="Attabad Lake: The Turquoise Miracle"
+                   data-badge="Geological Miracle"
+                   data-location="Upper Hunza, Gojal"
+                   data-altitude="2,557 meters (8,389 ft)"
+                   data-season="April – November">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Attabad Lake Glacial Blue">
+            <div class="lore-gradient"></div>
+            <div class="lore-content">
+              <span class="lore-badge">Glacial Wonder</span>
+              <h3 class="lore-title">Attabad: The 2010 Mountain Landslide</h3>
+              <p class="lore-snippet">
+                Born out of a colossal rockfall that severed the Karakoram Highway in 2010, Attabad transformed catastrophe into one of the world's most vivid glacial lakes.
+              </p>
+              <span class="lore-read-btn">Read Mountain Lore &rarr;</span>
+            </div>
+
+            <div class="lore-full-story" style="display: none;">
+              <p>
+                On January 4, 2010, an enormous mountain slope collapsed near the village of Attabad in Upper Hunza. The sheer volume of debris dammed the roaring Hunza River completely, displacing five villages and submerging over 19 kilometers of the Karakoram Highway under water.
+              </p>
+              <p>
+                Over months, glacial meltwater from high Karakoram peaks pooled behind the natural rock dam. The mineral-rich rock silt gave the lake its surreal, radiant turquoise color that shifts from emerald in the morning to deep azure at sunset.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 5: Katpana Cold Desert -->
+          <article class="lore-card" 
+                   data-category="deserts" 
+                   data-title="Katpana: The Snow-Crowned Sand Dunes"
+                   data-badge="Cold Desert"
+                   data-location="Skardu, Gilgit-Baltistan"
+                   data-altitude="2,228 meters (7,310 ft)"
+                   data-season="May – October (Summer) / Dec – Feb (Snow)">
+            <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Katpana Cold Desert Dunes">
+            <div class="lore-gradient"></div>
+            <div class="lore-content">
+              <span class="lore-badge">Geological Rarity</span>
+              <h3 class="lore-title">Katpana: Desert of Ice & Sand</h3>
+              <p class="lore-snippet">
+                One of the highest cold deserts in existence. Winds from the Indus river canyon sweep fine white sand against glaciers and jagged peaks.
+              </p>
+              <span class="lore-read-btn">Read Mountain Lore &rarr;</span>
+            </div>
+
+            <div class="lore-full-story" style="display: none;">
+              <p>
+                While most people picture deserts as scorching wastelands, Katpana sits above 2,200 meters elevation in the rain shadow of the Karakoram range. Because moisture-rich monsoon clouds cannot penetrate the massive mountain wall, rainfall is virtually non-existent, leaving sweeping, pristine sand dunes.
+              </p>
+              <p>
+                During winter months, temperatures plummet to -25&deg;C, coating the golden ripples of sand in powdery white snow. Sitting around a crackling juniper bonfire under the crystal clarity of the Milky Way at Katpana is an otherworldly experience unique to Baltistan.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 6: Basho Valley - Forest of Solitude -->
+          <article class="lore-card" 
+                   data-category="peaks" 
+                   data-title="Basho Valley: The Sacred Forest of Skardu"
+                   data-badge="Alpine Sanctuary"
+                   data-location="Rongdu, Skardu District"
+                   data-altitude="2,740 meters (8,990 ft)"
+                   data-season="June – October">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Basho Valley Skardu">
+            <div class="lore-gradient"></div>
+            <div class="lore-content">
+              <span class="lore-badge">Sacred Solitude</span>
+              <h3 class="lore-title">Basho: The Virgin Pine Forest</h3>
+              <p class="lore-snippet">
+                Surrounded on three sides by sheer granite walls, Basho has stayed pristine for centuries thanks to strict indigenous forest conservation bylaws.
+              </p>
+              <span class="lore-read-btn">Read Mountain Lore &rarr;</span>
+            </div>
+
+            <div class="lore-full-story" style="display: none;">
+              <p>
+                In the Balti tongue, <em>Basho</em> translates to "Sweetness." The valley is sheltered by towering mountains that trap warm air and encourage dense stands of Himalayan spruce, birch, and pine—a sharp and delightful contrast to the barren rock of Skardu.
+              </p>
+              <p>
+                For centuries, the village council (Jirga) of Basho maintained strict customary laws prohibiting the cutting of live trees without community consent. Because of this ancestral stewardship, Basho remains one of the last untouched alpine sanctuaries in Pakistan, traversed by crystalline glacial brooks and suspension bridges hand-tied with mountain hemp and logs.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Lightbox Modal ================= -->
+    <div class="modal-overlay" id="loreModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close lore modal">&times;</button>
+        <img src="" alt="Northern Landscape" class="modal-hero-img" id="modalImg">
+        <div class="modal-body">
+          <span class="lore-badge" id="modalBadge">Heritage & Lore</span>
+          <h2 class="modal-title" id="modalTitle" style="font-size: 2.2rem; margin: 0.8rem 0 0.5rem;">Mountain Legend</h2>
+          
+          <div class="modal-meta-grid">
+            <div class="meta-item">
+              <small>Location</small>
+              <strong id="modalLocation">Gilgit-Baltistan</strong>
+            </div>
+            <div class="meta-item">
+              <small>Elevation</small>
+              <strong id="modalAltitude">8,000m+</strong>
+            </div>
+            <div class="meta-item">
+              <small>Ideal Season</small>
+              <strong id="modalSeason">Summer</strong>
+            </div>
+          </div>
+
+          <div class="modal-story-text" id="modalStory">
+            <!-- Populated via JavaScript -->
+          </div>
+
+          <div style="margin-top: 2rem; border-top: 1px solid var(--color-card-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Inspired by this mountain legend?</p>
+            <a href="contact.html" class="btn-primary">Plan a Journey Here &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <div class="brand-logo-mark">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="16" r="10" fill="#F59E0B" opacity="0.85"/>
+                <path d="M7 34L20 14L33 34H7Z" fill="#2D6A4F" />
+                <path d="M14 34L20 22L26 34H14Z" fill="#52B788" />
+              </svg>
+            </div>
+            <span class="brand-text">VOYA</span>
+          </div>
+          <p>
+            Celebrating the stories, geography, and ancestral mountain culture of Pakistan’s Northern territories.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Legends</h3>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Nanga Parbat History</a></li>
+            <li><a href="gallery.html">Deosai Giants Lore</a></li>
+            <li><a href="gallery.html">Attabad Miracle</a></li>
+            <li><a href="gallery.html">Katpana Cold Sands</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Expeditions</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="guide.html">Field Guide</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Receive live road reports and blossom forecasts.</p>
+          <form class="newsletter-form" action="#">
+            <input type="email" class="newsletter-input" placeholder="Your email address..." required>
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VOYA Expeditions Pakistan. All rights reserved.</p>
+        <p>Built with respect for the Northern lands.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

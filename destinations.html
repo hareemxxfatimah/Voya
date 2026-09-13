@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOYA &bull; Destinations Explorer & Northern Circuits</title>
+  <meta name="description" content="Explore Pakistan's Northern circuits: Skardu, Hunza, Deosai, Astore, Basho, and Nanga Parbat with VOYA. Live budget calculator.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='%231B4332'/><circle cx='20' cy='15' r='8' fill='%23F59E0B'/><path d='M8 34L20 16L32 34H8Z' fill='%232D6A4F'/></svg>">
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="VOYA Home">
+        <div class="brand-logo-mark">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="16" r="10" fill="url(#sunGlowDest)" opacity="0.85"/>
+            <path d="M7 34L20 14L33 34H7Z" fill="url(#forestPeakDest)" />
+            <path d="M14 34L20 22L26 34H14Z" fill="#52B788" />
+            <path d="M20 7L20 14" stroke="#FEF08A" stroke-width="2.2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="sunGlowDest" x1="20" y1="6" x2="20" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F59E0B"/>
+                <stop offset="1" stop-color="#D97706" stop-opacity="0.3"/>
+              </linearGradient>
+              <linearGradient id="forestPeakDest" x1="20" y1="14" x2="20" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D6A4F"/>
+                <stop offset="1" stop-color="#0F241A"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-text">VOYA</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+          <li><a href="gallery.html" class="nav-link">Folklore</a></li>
+          <li><a href="services.html" class="nav-link">Expeditions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="guide.html" class="nav-link">Guide</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="plan.html" class="btn-primary">Plan Journey</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= Subpage Banner ================= -->
+    <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">&rsaquo;</span>
+          <span>Northern Circuits</span>
+        </div>
+        <h1 class="section-title" style="color: #fff; font-size: 3.2rem; margin-bottom: 0.8rem;">
+          Destinations & Circuits
+        </h1>
+        <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.88); max-width: 640px; margin: 0 auto;">
+          From the pine-sheltered waterfalls of Basho to the sunlit heights of Passu Cathedral and the ancient plateau of Deosai.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= Filter & Destination Directory ================= -->
+    <section style="padding: 5.5rem 0;">
+      <div class="container">
+        
+        <!-- Live Search Box -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="destinationSearch" placeholder="Search by name or region (e.g. Basho, Hunza, Deosai)..." aria-label="Search destinations">
+        </div>
+
+        <!-- Interactive Category Filters -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Sanctuaries</button>
+          <button class="filter-btn" data-filter="valleys">Pine & Alpine Valleys</button>
+          <button class="filter-btn" data-filter="peaks">High Peaks & Basecamps</button>
+          <button class="filter-btn" data-filter="plateaus">Sunlit Plateaus</button>
+          <button class="filter-btn" data-filter="lakes">Glacial Lakes</button>
+          <button class="filter-btn" data-filter="deserts">Cold Deserts</button>
+        </div>
+
+        <!-- Destination Cards Grid -->
+        <div class="card-grid" id="destinationsGrid">
+
+          <!-- Destination 1: Basho Valley -->
+          <article class="destination-card" data-category="valleys">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Basho Valley Skardu">
+              <span class="card-badge">Pine Sanctuary</span>
+              <span class="card-altitude">📍 2,740m</span>
+            </div>
+            <div class="card-body">
+              <div class="card-location"><span>📍</span> Basho &bull; Skardu District</div>
+              <h3 class="card-title">Basho Valley Secret Pines</h3>
+              <p class="card-description">
+                Tucked away from commercial routes, Basho is a secluded alpine paradise of rushing turquoise glacial streams, hand-carved wooden hanging bridges, and dense pine forests untouched by crowds.
+              </p>
+              <div class="card-features">
+                <span class="feature-pill">Cedar Groves</span>
+                <span class="feature-pill">Glacial Brooks</span>
+                <span class="feature-pill">Wooden Bridges</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-pricing">
+                  <span>3-Day Retreat</span>
+                  <strong>PKR 55,000 / person</strong>
+                </div>
+                <a href="contact.html?dest=Basho" class="btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Inquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Destination 2: Hunza & Passu Cones -->
+          <article class="destination-card" data-category="valleys">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Hunza Valley and Passu Cathedral">
+              <span class="card-badge">Golden Valley</span>
+              <span class="card-altitude">📍 2,438m</span>
+            </div>
+            <div class="card-body">
+              <div class="card-location"><span>📍</span> Hunza &bull; Central Gilgit</div>
+              <h3 class="card-title">Hunza Valley & Passu Cathedral</h3>
+              <p class="card-description">
+                Famed for the longevity of its people and spectacular vistas, Hunza is crowned by Rakaposhi (7,788m) and the iconic serrated needles of Passu Cones. Explore ancient forts and hanging suspension bridges.
+              </p>
+              <div class="card-features">
+                <span class="feature-pill">Baltit Fort (700 yrs)</span>
+                <span class="feature-pill">Passu Bridge</span>
+                <span class="feature-pill">Apricot Orchards</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-pricing">
+                  <span>6-Day Expedition</span>
+                  <strong>PKR 85,000 / person</strong>
+                </div>
+                <a href="contact.html?dest=Hunza" class="btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Inquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Destination 3: Deosai Plains -->
+          <article class="destination-card" data-category="plateaus">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Deosai National Park">
+              <span class="card-badge">Wild Plateau</span>
+              <span class="card-altitude">📍 4,114m</span>
+            </div>
+            <div class="card-body">
+              <div class="card-location"><span>📍</span> Deosai &bull; Astore / Skardu</div>
+              <h3 class="card-title">Deosai "The Land of Giants"</h3>
+              <p class="card-description">
+                Spanning over 3,000 square kilometers, Deosai is blanketed in snow for eight months. In summer, it erupts into an ocean of millions of wildflowers, crystal streams, and the heart-shaped Sheosar Lake.
+              </p>
+              <div class="card-features">
+                <span class="feature-pill">Sheosar Lake</span>
+                <span class="feature-pill">Himalayan Brown Bear</span>
+                <span class="feature-pill">Wildflower Bloom</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-pricing">
+                  <span>4-Day 4WD Trek</span>
+                  <strong>PKR 95,000 / person</strong>
+                </div>
+                <a href="contact.html?dest=Deosai" class="btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Inquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Destination 4: Nanga Parbat & Fairy Meadows -->
+          <article class="destination-card" data-category="peaks">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80" alt="Nanga Parbat Killer Mountain">
+              <span class="card-badge" style="background: #e11d48; color: #fff;">Alpine Giant</span>
+              <span class="card-altitude">📍 8,126m</span>
+            </div>
+            <div class="card-body">
+              <div class="card-location"><span>📍</span> Diamer &bull; Himalayas</div>
+              <h3 class="card-title">Nanga Parbat & Fairy Meadows</h3>
+              <p class="card-description">
+                The 9th highest mountain on Earth and the western anchor of the Himalayas. Known as the "Killer Mountain" for its fierce Rupal face. Fairy Meadows offers front-row views of its avalanche-strewn northern ice walls.
+              </p>
+              <div class="card-features">
+                <span class="feature-pill">Raikot Trail</span>
+                <span class="feature-pill">Beyal Camp</span>
+                <span class="feature-pill">German Basecamp</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-pricing">
+                  <span>5-Day Trek</span>
+                  <strong>PKR 70,000 / person</strong>
+                </div>
+                <a href="contact.html?dest=NangaParbat" class="btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Inquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Destination 5: Astore & Rama Meadows -->
+          <article class="destination-card" data-category="valleys">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Rama Meadows Astore Valley">
+              <span class="card-badge">Pine Meadows</span>
+              <span class="card-altitude">📍 3,150m</span>
+            </div>
+            <div class="card-body">
+              <div class="card-location"><span>📍</span> Astore Valley</div>
+              <h3 class="card-title">Astore Valley & Rama Glacial Lake</h3>
+              <p class="card-description">
+                A pristine pine-covered corridor connecting Gilgit with the Deosai plateau. Rama Meadows is shaded by ancient cedar trees with the emerald Rama Lake resting beneath the eastern shoulder of Nanga Parbat.
+              </p>
+              <div class="card-features">
+                <span class="feature-pill">Rama Glacial Lake</span>
+                <span class="feature-pill">Tarashing Gateway</span>
+                <span class="feature-pill">Pine Forest Camping</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-pricing">
+                  <span>4-Day Circuit</span>
+                  <strong>PKR 65,000 / person</strong>
+                </div>
+                <a href="contact.html?dest=Astore" class="btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Inquire</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Destination 6: Katpana Cold Desert -->
+          <article class="destination-card" data-category="deserts">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Katpana Cold Desert Skardu">
+              <span class="card-badge">Golden Dunes</span>
+              <span class="card-altitude">📍 2,228m</span>
+            </div>
+            <div class="card-body">
+              <div class="card-location"><span>📍</span> Skardu &bull; Baltistan</div>
+              <h3 class="card-title">Katpana & Sarfaranga Cold Deserts</h3>
+              <p class="card-description">
+                Often called Biama Nakpo by locals, this geological wonder features rolling white sand dunes set against granite Karakoram peaks, with crisp night stargazing and winter snow over dunes.
+              </p>
+              <div class="card-features">
+                <span class="feature-pill">Stargazing Domes</span>
+                <span class="feature-pill">Sand Dunes</span>
+                <span class="feature-pill">Lower Kachura</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-pricing">
+                  <span>5-Day Expedition</span>
+                  <strong>PKR 75,000 / person</strong>
+                </div>
+                <a href="contact.html?dest=Skardu" class="btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Inquire</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Interactive Trip Budget Estimator ================= -->
+    <section id="budgetCalculator" style="padding: 2rem 0 6rem; background: #f7f5ee;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Interactive Planner</span>
+          <h2 class="section-title">Northern Expedition Cost Estimator</h2>
+          <p class="section-subtitle">Adjust duration, group size, 4WD transport, and lodging tier to calculate a live estimated budget.</p>
+        </div>
+
+        <div class="calculator-box">
+          <div class="calc-grid">
+            <div class="calc-controls-col">
+
+              <!-- Slider 1: Days -->
+              <div class="calc-control">
+                <div class="calc-label-row">
+                  <span>📅 Duration of Expedition:</span>
+                  <span class="calc-value-badge" id="calcDaysValue">7 Days</span>
+                </div>
+                <input type="range" class="calc-slider" id="calcDays" min="3" max="14" value="7" step="1">
+              </div>
+
+              <!-- Slider 2: Travelers -->
+              <div class="calc-control">
+                <div class="calc-label-row">
+                  <span>👥 Number of Travelers:</span>
+                  <span class="calc-value-badge" id="calcTravelersValue">4 People</span>
+                </div>
+                <input type="range" class="calc-slider" id="calcTravelers" min="1" max="12" value="4" step="1">
+              </div>
+
+              <!-- Selects: Vehicle & Hotel -->
+              <div class="calc-select-group">
+                <div class="calc-control" style="margin-bottom: 0;">
+                  <label class="calc-label-row" for="calcVehicle">
+                    <span>🚙 4WD Vehicle Tier</span>
+                  </label>
+                  <select id="calcVehicle" class="calc-select">
+                    <option value="18000">Toyota Prado 4x4 (Rugged Passes)</option>
+                    <option value="24000">Land Cruiser V8 (VIP Expedition)</option>
+                    <option value="15000">Toyota Grand Cabin (Valleys & KKH)</option>
+                    <option value="12000">Willys Mountain Jeep (Classic Rough)</option>
+                  </select>
+                </div>
+
+                <div class="calc-control" style="margin-bottom: 0;">
+                  <label class="calc-label-row" for="calcHotel">
+                    <span>🏨 Lodging Tier (Per Person/Night)</span>
+                  </label>
+                  <select id="calcHotel" class="calc-select">
+                    <option value="8000">Heritage Haveli & Boutique Resorts</option>
+                    <option value="16000">Luxury Glamping & Serena Chains</option>
+                    <option value="4500">Alpine Camps & Traditional Homestays</option>
+                  </select>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Calculation Output Column -->
+            <div class="calc-result-panel">
+              <div class="calc-total-title">Total Expedition Estimate</div>
+              <div class="calc-total-amount" id="calcTotalPkr">PKR 0</div>
+              <div class="calc-usd-equiv" id="calcTotalUsd">Approx. $0 USD</div>
+
+              <ul class="calc-details-list">
+                <li><span>Per Person Share:</span> <strong id="calcPerPersonPkr">PKR 0</strong></li>
+                <li><span>Fuel & 4x4 Driver:</span> <strong>Included</strong></li>
+                <li><span>Native Mountain Guide:</span> <strong>Included</strong></li>
+                <li><span>High-Pass Environmental Passes:</span> <strong>Included</strong></li>
+              </ul>
+
+              <a href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">Confirm This Itinerary</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <div class="brand-logo-mark">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="16" r="10" fill="#F59E0B" opacity="0.85"/>
+                <path d="M7 34L20 14L33 34H7Z" fill="#2D6A4F" />
+                <path d="M14 34L20 22L26 34H14Z" fill="#52B788" />
+              </svg>
+            </div>
+            <span class="brand-text">VOYA</span>
+          </div>
+          <p>
+            Dedicated to mindful, authentic journeys across Pakistan’s Northern territories: Basho Valley, Hunza, Skardu, Deosai, and the giants of the Karakoram.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Circuits</h3>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Basho Pines</a></li>
+            <li><a href="destinations.html">Hunza Valley</a></li>
+            <li><a href="destinations.html">Deosai Plains</a></li>
+            <li><a href="destinations.html">Nanga Parbat Base</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Folklore Gallery</a></li>
+            <li><a href="services.html">Expeditions</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="guide.html">Field Guide</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Receive live road reports and blossom forecasts.</p>
+          <form class="newsletter-form" action="#">
+            <input type="email" class="newsletter-input" placeholder="Your email address..." required>
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VOYA Expeditions Pakistan. All rights reserved.</p>
+        <p>Built with respect for the Northern lands.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/destinations.js"></script>
+</body>
+</html>
